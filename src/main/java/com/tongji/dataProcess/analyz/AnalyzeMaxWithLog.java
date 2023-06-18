@@ -13,7 +13,7 @@ public class AnalyzeMaxWithLog implements Analyze{
         analyzeMax = new AnalyzeMax();
         System.out.println("calculating max value!!");
         double res = analyzeMax.analyzeMethod(rawData);
-        System.out.println("calculate end~");
+        System.out.println("calculate end~~");
         return res;
     }
 }
