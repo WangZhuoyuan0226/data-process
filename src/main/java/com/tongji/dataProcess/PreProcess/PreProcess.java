@@ -1,15 +1,11 @@
 package com.tongji.dataProcess.PreProcess;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.entity.DataEntity;
 import lombok.Getter;
 import lombok.Setter;
 
+//TODO why abstract class? necessary?
 public abstract class PreProcess{
-    PreProcess(RawData rawData){
-        this.rawData = rawData;
-    }
-    @Getter
-    @Setter
-    public RawData rawData;
-    public abstract RawData preProcessedMethod();
+
+    public abstract DataEntity preProcessedMethod(DataEntity rawData);
 }

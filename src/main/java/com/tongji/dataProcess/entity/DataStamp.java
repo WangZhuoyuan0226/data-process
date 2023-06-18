@@ -1,4 +1,4 @@
-package com.tongji.dataProcess.utils;
+package com.tongji.dataProcess.entity;
 
 public class DataStamp {
     public DataStamp(double time, double value){
