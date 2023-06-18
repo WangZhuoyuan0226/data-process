@@ -11,7 +11,7 @@ public class AnalyzeMaxWithLog implements Analyze{
     @Override
     public double analyzeMethod(RawData rawData) {
         analyzeMax = new AnalyzeMax();
-        System.out.println("calculating max value!");
+        System.out.println("calculating max value!!");
         double res = analyzeMax.analyzeMethod(rawData);
         System.out.println("calculate end");
         return res;
