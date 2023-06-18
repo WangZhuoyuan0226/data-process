@@ -1,28 +1,22 @@
 package com.tongji.dataProcess.PreProcess;
 
-import com.tongji.dataProcess.utils.DataStamp;
-import com.tongji.dataProcess.utils.RawData;
-import lombok.Getter;
-import lombok.Setter;
+import com.tongji.dataProcess.entity.DataStamp;
+import com.tongji.dataProcess.entity.DataEntity;
 
 public class PreProcessAddBase extends PreProcess{
-    @Getter
-    @Setter
-    double base = 0;
-    public PreProcessAddBase(RawData rawData) {
-        super(rawData);
-    }
-    public PreProcessAddBase(RawData rawData, double base){
-        super(rawData);
+    private double base;
+
+    public PreProcessAddBase(double base) {
         this.base = base;
     }
+
     @Override
-    public RawData preProcessedMethod() {
-        for(int i = 0; i < rawData.getData().size(); i++){
-            DataStamp dataStamp = rawData.getData().get(i);
+    public DataEntity preProcessedMethod(DataEntity dataEntity) {
+        for(int i = 0; i < dataEntity.getData().size(); i++){
+            DataStamp dataStamp = dataEntity.getData().get(i);
             dataStamp.value = dataStamp.value + base;
-            rawData.getData().set(i, dataStamp);
+            dataEntity.getData().set(i, dataStamp);
         }
-        return rawData;
+        return dataEntity;
     }
 }

@@ -1,7 +1,7 @@
 package com.tongji.dataProcess.analyz;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.entity.DataEntity;
 
 public interface Analyze {
-    public double analyzeMethod(RawData rawData);
+    public double analyzeMethod(DataEntity rawData);
 }

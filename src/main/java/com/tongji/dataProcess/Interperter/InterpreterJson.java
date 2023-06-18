@@ -1,13 +1,17 @@
 package com.tongji.dataProcess.Interperter;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.entity.DataEntity;
+import com.tongji.dataProcess.entity.DataStamp;
+
+import java.util.ArrayList;
 
 public class InterpreterJson implements Interpreter{
     @Override
-    public RawData getRawData() {
-        System.out.println("This data is in the form of json");
-        RawData rawData = new RawData();
-        rawData.setType("json");
-        return rawData;
+    public DataEntity parse(ArrayList<DataStamp> rawData) {
+        System.out.println("This data is in the form of xml");
+        DataEntity dataEntity = new DataEntity();
+        dataEntity.setType("json");
+        dataEntity.setData(rawData);
+        return dataEntity;
     }
 }
