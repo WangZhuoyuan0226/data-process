@@ -11,7 +11,7 @@ public class AnalyzeMinWithLog implements Analyze{
     @Override
     public double analyzeMethod(RawData rawData) {
         analyzeMin = new AnalyzeMin();
-        System.out.println("calculating min value!");
+        System.out.println("calculating min value");
         double res = analyzeMin.analyzeMethod(rawData);
         System.out.println("calculate end");
         return res;

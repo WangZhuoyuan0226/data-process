@@ -11,7 +11,7 @@ public class AnalyzeMeanWithLog implements Analyze{
     @Override
     public double analyzeMethod(RawData rawData) {
         analyzeMean = new AnalyzeMean();
-        System.out.println("calculating mean value!");
+        System.out.println("calculating mean value");
         double res = analyzeMean.analyzeMethod(rawData);
         System.out.println("calculate end");
         return res;
