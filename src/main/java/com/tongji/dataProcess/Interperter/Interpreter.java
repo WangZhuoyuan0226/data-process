@@ -1,7 +1,7 @@
 package com.tongji.dataProcess.Interperter;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.utils.DataEntity;
 
 public interface Interpreter {
-    public RawData getRawData();
+    public DataEntity getRawData();
 }

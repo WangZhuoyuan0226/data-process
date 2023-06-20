@@ -1,22 +1,21 @@
 package com.tongji.dataProcess.Interperter;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.utils.DataEntity;
+import com.tongji.dataProcess.utils.DataType;
 import org.springframework.stereotype.*;
 
 @Component
-public class InterpreterFactory implements InterpreterFactoryI {
-    public RawData queryRawData(String type){
-        RawData rawData = null;
+public class InterpreterFactory {
+    public static Interpreter createInterpreter(DataType dataType){
         Interpreter interpreter = null;
-        switch (type){
-            case "json":
+        switch (dataType){
+            case JSON:
                 interpreter = new InterpreterJson();
                 break;
-            case "xml":
+            case XML:
                 interpreter = new InterpreterXml();
                 break;
         }
-        rawData = interpreter.getRawData();
-        return rawData;
+        return interpreter;
     }
 }

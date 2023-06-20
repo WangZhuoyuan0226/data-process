@@ -4,9 +4,8 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.util.ArrayList;
-import java.util.TreeMap;
 
-public class RawData {
+public class DataEntity {
 
     @Getter
     @Setter

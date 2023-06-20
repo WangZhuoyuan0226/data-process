@@ -1,13 +1,14 @@
 package com.tongji.dataProcess.Interperter;
 
-import com.tongji.dataProcess.utils.RawData;
+import com.tongji.dataProcess.mock.Mock;
+import com.tongji.dataProcess.utils.DataEntity;
 
 public class InterpreterXml implements Interpreter{
     @Override
-    public RawData getRawData() {
-        System.out.println("This data is in the form of xml");
-        RawData rawData = new RawData();
-        rawData.setType("xml");
-        return rawData;
+    public DataEntity getRawData() {
+        DataEntity dataEntity = new DataEntity();
+        dataEntity.setType("xml");
+        dataEntity.setData(Mock.mockXmlData(3));
+        return dataEntity;
     }
 }
